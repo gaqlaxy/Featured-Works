@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Works</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'PP Neue Montreal Book';
+            font-style: normal;
+            font-weight: normal;
+            src: local('PP Neue Montreal Book'), url('ppneuemontreal-book.woff') format('woff');
+        }
+
+        body {
+            font-family: 'PP Neue Montreal Book';
+
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; */
+            background: #fff;
+            color: #000;
+        }
+
+        .featured-section {
+            padding: 80px 40px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 120px;
+            font-weight: 700;
+            letter-spacing: -3px;
+            line-height: 0.9;
+        }
+
+        .section-number {
+            font-size: 80px;
+            font-weight: 300;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .work-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .work-image {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+        }
+
+        .work-item:nth-child(odd) .work-image {
+            aspect-ratio: 16/14;
+        }
+
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .work-item:hover .work-image img {
+            transform: scale(1.05);
+        }
+
+        .work-info {
+            padding: 20px 0;
+            color: #000;
+        }
+
+        .work-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .work-year {
+            font-size: 14px;
+            font-weight: 300;
+            color: #666;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .featured-section {
+                padding: 40px 20px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 30px;
+                gap: 5px;
+            }
+
+            .section-title {
+                font-size: 48px;
+                letter-spacing: -1px;
+            }
+
+            .section-number {
+                font-size: 32px;
+            }
+
+            .works-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .work-item:nth-child(odd) {
+                justify-self: start;
+                max-width: 85%;
+            }
+
+            .work-item:nth-child(even) {
+                justify-self: end;
+                max-width: 85%;
+            }
+
+            .work-item:nth-child(odd) .work-image {
+                aspect-ratio: 4/3;
+            }
+
+            .work-item:nth-child(even) .work-image {
+                aspect-ratio: 4/3;
+            }
+
+            .work-info {
+                padding: 15px 0;
+            }
+
+            .work-title {
+                font-size: 18px;
+            }
+
+            .work-year {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 36px;
+            }
+
+            .section-number {
+                font-size: 28px;
+            }
+
+            .work-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="featured-section">
+        <div class="section-header">
+            <h2 class="section-title">FEATURED<br>WORKS</h2>
+            <span class="section-number">(06)</span>
+        </div>
+
+        <div class="works-grid">
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=750&fit=crop"
+                        alt="Modern house exterior with dark cladding">
+                </div>
+                <div class="work-info">
+                    <div class="work-title">MYRTLE POOL HOUSE</div>
+                    <div class="work-year">2024</div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=750&fit=crop"
+                        alt="Modern house interior with curved roof">
+                </div>
+                <div class="work-info">
+                    <div class="work-title">COASTAL RESIDENCE</div>
+                    <div class="work-year">2024</div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=750&fit=crop"
+                        alt="Contemporary outdoor space">
+                </div>
+                <div class="work-info">
+                    <div class="work-title">URBAN PAVILION</div>
+                    <div class="work-year">2023</div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=750&fit=crop"
+                        alt="Minimalist architecture">
+                </div>
+                <div class="work-info">
+                    <div class="work-title">VALLEY VIEW HOUSE</div>
+                    <div class="work-year">2023</div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&h=750&fit=crop"
+                        alt="Modern architectural details">
+                </div>
+                <div class="work-info">
+                    <div class="work-title">GARDEN STUDIO</div>
+                    <div class="work-year">2023</div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-image">
+                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&h=750&fit=crop"
+                        alt="Contemporary residence">
+                </div>
+                <div class="work-info">
+                    <div class="work-title">HILLSIDE RETREAT</div>
+                    <div class="work-year">2022</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="cta-btn-styled">
+            <span>View all works</span>
+        </a>
+    </section>
+
+
+    <script></script>
+</body>
+
+</html>
