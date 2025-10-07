@@ -164,6 +164,42 @@
         display: flex;
         justify-content: center;
       }
+      .view-project-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 12px 24px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 10;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .work-item:hover .view-project-btn {
+        opacity: 1;
+      }
+
+      .view-project-btn::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: #000;
+        border-radius: 50%;
+      }
+
+      .view-project-btn span {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+      }
 
       /* Mobile styles */
       @media (max-width: 768px) {
@@ -221,6 +257,9 @@
         .work-year {
           font-size: 14px;
         }
+        .view-project-btn {
+          display: none;
+        }
       }
 
       @media (max-width: 480px) {
@@ -234,6 +273,9 @@
 
         .work-info {
           padding: 20px;
+        }
+        .view-project-btn {
+          display: none;
         }
       }
     </style>
@@ -253,6 +295,9 @@
               src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=750&fit=crop"
               alt="Modern house exterior with dark cladding"
             />
+            <div class="view-project-btn">
+              <span>View Project</span>
+            </div>
           </div>
           <div class="work-info">
             <div class="work-title">MYRTLE POOL HOUSE</div>
@@ -266,6 +311,9 @@
               src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=750&fit=crop"
               alt="Modern house interior with curved roof"
             />
+            <div class="view-project-btn">
+              <span>View Project</span>
+            </div>
           </div>
           <div class="work-info">
             <div class="work-title">COASTAL RESIDENCE</div>
@@ -279,6 +327,9 @@
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=750&fit=crop"
               alt="Contemporary outdoor space"
             />
+            <div class="view-project-btn">
+              <span>View Project</span>
+            </div>
           </div>
           <div class="work-info">
             <div class="work-title">URBAN PAVILION</div>
@@ -292,6 +343,9 @@
               src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=750&fit=crop"
               alt="Minimalist architecture"
             />
+            <div class="view-project-btn">
+              <span>View Project</span>
+            </div>
           </div>
           <div class="work-info">
             <div class="work-title">VALLEY VIEW HOUSE</div>
@@ -305,6 +359,9 @@
               src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&h=750&fit=crop"
               alt="Modern architectural details"
             />
+            <div class="view-project-btn">
+              <span>View Project</span>
+            </div>
           </div>
           <div class="work-info">
             <div class="work-title">GARDEN STUDIO</div>
@@ -318,6 +375,9 @@
               src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&h=750&fit=crop"
               alt="Contemporary residence"
             />
+            <div class="view-project-btn">
+              <span>View Project</span>
+            </div>
           </div>
           <div class="work-info">
             <div class="work-title">HILLSIDE RETREAT</div>
